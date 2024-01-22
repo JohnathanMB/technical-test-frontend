@@ -1,13 +1,114 @@
-<article>
-<section class="listing-description">
-  <h1 class="listing-heading">{{ client?.idType }}</h1>
-  <h1 class="listing-heading">{{ client?.idNumber }}</h1>
-  <h1 class="listing-heading">{{ client?.firstName }}</h1>
-  <h1 class="listing-heading">{{ client?.secondName }}</h1>
-  <h1 class="listing-heading">{{ client?.firstLastname }}</h1>
-  <h1 class="listing-heading">{{ client?.secondLastName }}</h1>
-  <h1 class="listing-heading">{{ client?.phoneNumber }}</h1>
-  <h1 class="listing-heading">{{ client?.address }}</h1>
-  <h1 class="listing-heading">{{ client?.city }}</h1>
-</section>
-</article>
+<form class="form" style="display: flex; justify-content:center; align-items:center;" (submit)="goLogin()" >
+
+  <div class="card mt-3">
+    <div class="card-body">
+
+      <div class="container-fluid h-100">
+        <div class="row align-items-center">
+          <h1 class="form-text text-muted mb-4">Información Básica</h1>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="idType">Tipo de documento</label>
+        <input id="idType"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.idType}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="idNumber">Número de documento</label>
+        <input id="idNumber"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.idNumber}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">Primer Nombre</label>
+        <input id="firstName"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.firstName}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="secondName">Segundo Nombre</label>
+        <input id="secondName"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.secondName}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="firstLastname">Primer Apellido</label>
+        <input id="firstLastname"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.firstLastname}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="secondLastName">Segundo Apellido</label>
+        <input id="secondLastName"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.secondLastName}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Telefono</label>
+        <input id="phoneNumber"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.phoneNumber}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="address">Dirección</label>
+        <input id="address"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.address}}"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="city">Ciudad</label>
+        <input id="city"
+               type="text"
+               class="form-control mb-4"
+               disabled
+               placeholder="{{client?.city}}"
+        >
+      </div>
+
+      <div class="container-fluid h-100">
+        <div class="row align-items-center">
+          <button type="submit" class="btn btn-info">Ir a inicio</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</form>
+

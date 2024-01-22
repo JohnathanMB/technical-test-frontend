@@ -1,15 +1,23 @@
-<section class="listing">
-    <h1 class="listing-heading">{{ client.idType }}</h1>
-    <h1 class="listing-heading">{{ client.idNumber }}</h1>
-    <h1 class="listing-heading">{{ client.firstName }}</h1>
-    <h1 class="listing-heading">{{ client.secondName }}</h1>
-    <h1 class="listing-heading">{{ client.firstLastname }}</h1>
-    <h1 class="listing-heading">{{ client.secondLastName }}</h1>
-    <h1 class="listing-heading">{{ client.phoneNumber }}</h1>
-    <h1 class="listing-heading">{{ client.address }}</h1>
-    <h1 class="listing-heading">{{ client.city }}</h1>
+<form class="card" style="width: 60rem;" (submit)="goLogin()" >
 
+  <div >
+    <h1>Clientes</h1>
+    <ul class="list-group list-group-light" *ngFor="let client of clients, let i = index">
+      <li class="list-group-item">{{i}} :
+        {{client.idType}} :
+        {{client.idNumber}} :
+        {{client.firstName}} :
+        {{client.secondName}} :
+        {{client.firstLastname}} :
+        {{client.secondLastName}} :
+        {{client.phoneNumber}} :
+        {{client.address}} :
+        {{client.city}}</li>
+    </ul>
+  </div>
 
-  <a [routerLink]="['/details', client.idType.concat('-').concat(client.idNumber.toString())]">"Ver Detalles"</a>
+  <br>
+  <button type="submit" class="btn btn-info" style="right: 10rem;">Ir a inicio</button>
 
-  </section>
+</form>
+
