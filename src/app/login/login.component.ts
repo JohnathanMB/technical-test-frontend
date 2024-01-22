@@ -42,4 +42,8 @@ export class LoginComponent {
     let clientId = idType.concat("-").concat(idNumber)
     this.router.navigate([`/details/${clientId}`])
   }
+
+  goToAllClientsView(){
+    this.router.navigate([`/clients`])
+  }
 }

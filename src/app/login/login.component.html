@@ -1,4 +1,5 @@
-<form [formGroup]="searchClientForm" (submit)="submitClient()" class="form" style="width: 18rem;">
+
+<form [formGroup]="searchClientForm" (submit)="submitClient()" class="form" style="display: flex; justify-content:center; align-items:center;">
 
   <div class="card mt-3">
     <div class="card-body">
@@ -38,16 +39,20 @@
           <button type="submit" class="btn btn-info" [disabled]="!searchClientForm.valid">Buscar</button>
         </div>
       </div>
+
     </div>
   </div>
 
-
 </form>
 
-<section class="results">
-  <app-client-information
-    *ngFor="let client of clients"
-    [client]="client">
-  </app-client-information>
-</section>
+<br>
+
+<div style="display: flex; justify-content:center; align-items:center;">
+  <div class="container-fluid h-100" >
+    <div class="row align-items-center">
+      <button class="btn btn-info" (click)="goToAllClientsView()" >Ver todos los clientes</button>
+    </div>
+  </div>
+</div>
+
 
