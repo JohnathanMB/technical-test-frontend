@@ -1,0 +1,53 @@
+<form [formGroup]="searchClientForm" (submit)="submitClient()" class="form" style="width: 18rem;">
+
+  <div class="card mt-3">
+    <div class="card-body">
+
+      <div class="container-fluid h-100">
+        <div class="row align-items-center">
+          <small class="form-text text-muted mb-4">Todos los compaos son obligatorios</small>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="idTypes">Seleccione tipo de documento</label>
+        <select id="idTypes" formControlName="idType" class="form-control mb-4" required>
+          <option value="C">Cédula</option>
+          <option value="P">Pasaporte</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="idNumber">Número de documento</label>
+        <input id="idNumber"
+               type="text"
+               formControlName="idNumber"
+               class="form-control mb-4"
+               placeholder="Número de documento"
+               minlength="9"
+               maxlength="14"
+               separator
+               required
+        >
+      </div>
+
+      <div class="container-fluid h-100">
+        <div class="row align-items-center">
+          <button type="submit" class="btn btn-info" [disabled]="!searchClientForm.valid">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+
+<section class="results">
+  <app-client-information
+    *ngFor="let client of clients"
+    [client]="client">
+  </app-client-information>
+</section>
+

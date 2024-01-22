@@ -1,0 +1,15 @@
+<section class="listing">
+    <h1 class="listing-heading">{{ client.idType }}</h1>
+    <h1 class="listing-heading">{{ client.idNumber }}</h1>
+    <h1 class="listing-heading">{{ client.firstName }}</h1>
+    <h1 class="listing-heading">{{ client.secondName }}</h1>
+    <h1 class="listing-heading">{{ client.firstLastname }}</h1>
+    <h1 class="listing-heading">{{ client.secondLastName }}</h1>
+    <h1 class="listing-heading">{{ client.phoneNumber }}</h1>
+    <h1 class="listing-heading">{{ client.address }}</h1>
+    <h1 class="listing-heading">{{ client.city }}</h1>
+
+
+  <a [routerLink]="['/details', client.idType.concat('-').concat(client.idNumber.toString())]">"Ver Detalles"</a>
+
+  </section>
